@@ -67,10 +67,27 @@ AI decides the categories based on what it sees:
 ### Installation
 
 #### Option 1: Download Pre-built App (Easiest)
-1. Download `SnapSort-1.0.0-arm64.dmg` from the `dist` folder
-2. Open the DMG
-3. Drag to Applications
-4. Launch and enjoy!
+
+**Download from [GitHub Releases](https://github.com/YOUR_USERNAME/SnapSort/releases)**
+
+1. Download `SnapSort-1.0.0-arm64.dmg`
+2. Open the DMG and drag SnapSort to Applications
+3. **First Launch Fix** - macOS will show a security warning. This is normal for apps outside the App Store. Choose one:
+
+   **Option A: Terminal Command (Fastest)**
+   ```bash
+   sudo xattr -cr /Applications/SnapSort.app
+   ```
+   
+   **Option B: Right-Click Method**
+   - Right-click SnapSort in Applications → Open → Open
+   
+   **Option C: System Settings**
+   - Try to open SnapSort (it will be blocked)
+   - Go to System Settings → Privacy & Security
+   - Click "Open Anyway"
+
+4. Launch and enjoy! (Only needed once)
 
 #### Option 2: Run from Source
 ```bash
@@ -209,6 +226,9 @@ The built app appears in the `dist` folder.
 ---
 
 ## Common Questions
+
+**Why does macOS say "SnapSort is damaged" or block it?**  
+This is normal for apps downloaded from outside the Mac App Store. Apple requires a $99/year developer certificate to skip this warning. Just run `sudo xattr -cr /Applications/SnapSort.app` in Terminal (or use the right-click method above). You only need to do this once!
 
 **Does this work on Windows/Linux?**  
 Not yet! The build is currently macOS-only, but the code should work on other platforms with minimal changes. PRs welcome!
