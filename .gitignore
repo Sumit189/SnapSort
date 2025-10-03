@@ -1,0 +1,6 @@
+/.DS_Store
+dist/
+*.dmg
+*.app
+node_modules/
+.env

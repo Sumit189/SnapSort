@@ -1,0 +1,36 @@
+{
+  "name": "snapsort",
+  "version": "1.0.0",
+  "description": "AI-powered image organizer using Google Gemini - automatically categorize and sort your images.",
+  "main": "electron/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist": "electron-builder --mac dmg",
+    "make-icon": "./scripts/create-icns.sh"
+  },
+  "build": {
+    "appId": "com.snapsort.app",
+    "productName": "SnapSort",
+    "files": [
+      "index.html",
+      "styles.css",
+      "app.js",
+      "assets/**",
+      "electron/**"
+    ],
+    "asar": true,
+    "mac": {
+      "target": ["dmg"],
+      "category": "public.app-category.photography",
+      "icon": "assets/logo.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  }
+}
+
+
