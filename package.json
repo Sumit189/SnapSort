@@ -24,7 +24,13 @@
     "mac": {
       "target": ["dmg"],
       "category": "public.app-category.photography",
-      "icon": "assets/logo.png"
+      "icon": "assets/logo.png",
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "dmg": {
+      "sign": false
     }
   },
   "devDependencies": {
